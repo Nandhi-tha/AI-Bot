@@ -4,6 +4,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.prompts import PromptTemplate
 from langchain.memory import ConversationBufferMemory
 from langchain.chains.llm import LLMChain
+from langsmith import traceable
 
 class Chatbot:
     def __init__(self):
@@ -48,7 +49,8 @@ Assistant:
             memory=self.memory,
             prompt=prompt_template
         )
-
+        
+    @traceable(project_name="AI-Bot")
     def chat(self, user_input: str) -> str:
         try:
             response = self.chain.invoke(input=user_input)
