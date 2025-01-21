@@ -106,4 +106,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-Feel free to contribute to the project by submitting issues or pull requests. Happy coding!
+Happy coding!
